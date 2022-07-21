@@ -19,11 +19,14 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
     let id = prompt("Id:");
     p.on("error",e => console.log(e));
     console.log(id);
+
+
     p.on('open',e =>{
         let con = p.connect(id);
 
         con.on('open',e2 =>{
             window.addEventListener("keydown",e =>{
+                console.log(e);
                 con.send({type:"keydown",options:{
                         key:e.key,
                         keyCode:e.keyCode,
@@ -31,10 +34,27 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                         which:e.which,
                         shiftKey:e.shiftKey,
                         ctrlKey:e.ctrlKey,
-                        metaKey:e.metaKey
+                        metaKey:e.metaKey,
+                        altKey:e.altKey,
+                        repeat:e.repeat,
+                        isComposing:e.isComposing
+                    }});
+
+                con.send({type:"keydown",options:{
+                        key:e.key,
+                        keyCode:e.keyCode,
+                        code:e.code,
+                        which:e.which,
+                        shiftKey:e.shiftKey,
+                        ctrlKey:e.ctrlKey,
+                        metaKey:e.metaKey,
+                        altKey:e.altKey,
+                        repeat:e.repeat,
+                        isComposing:e.isComposing
                     }});
             });
             window.addEventListener("keyup",e =>{
+                console.log("keyup");
                 con.send({type:"keyup",options:{
                         key:e.key,
                         keyCode:e.keyCode,
@@ -46,15 +66,21 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                     }});
             });
         });
-    });
 
-    p.on("call", call =>{
-        call.answer();
-
-        call.on('stream', stream => {
-            document.getElementById("stream").srcObject = stream;
+        p.on("call", call =>{
+            call.answer();
+            console.log("call");
+            call.on('stream', stream => {
+                console.log("stream" + stream);
+                document.getElementById("stream").srcObject = stream;
+            });
         });
+
     });
+
+
+
+
 
 }, error =>{
     alert(error + ". Terminating");

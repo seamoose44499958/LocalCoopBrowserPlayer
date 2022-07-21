@@ -40,7 +40,7 @@ function createPeer(canvas){
         //Other peer sends over json with type of keyboard event(data.type) and options(data.options)
         conn.on('data',data =>{
             console.log(data);
-            window.dispatchEvent(new KeyboardEvent(data.type,data.options));
+            canvas.dispatchEvent(new KeyboardEvent(data.type,data.options));
         });
 
         //Prompts user for how many frames to stream the canvas
@@ -96,7 +96,7 @@ else{
 
         let i = +prompt(response);
 
-        if( i === NaN || i < -1 || i >= canvases.length){
+        if( isNaN(i) || i < -1 || i >= canvases.length){
             alert("Improper input. Terminating");
         }
         else {
@@ -111,7 +111,7 @@ else{
 
         let i = +prompt(response);
 
-        if( i === NaN || i < 0 || i >= canvases.length){
+        if( isNaN(i) || i < 0 || i >= iframes.length){
             alert("Improper input. Terminating");
         }
         else{
