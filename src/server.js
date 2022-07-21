@@ -39,6 +39,7 @@ function createPeer(canvas){
     p.on("connection",conn =>{
         //Other peer sends over json with type of keyboard event(data.type) and options(data.options)
         conn.on('data',data =>{
+            console.log(data);
             window.dispatchEvent(new KeyboardEvent(data.type,data.options));
         });
 

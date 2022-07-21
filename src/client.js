@@ -23,7 +23,7 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
         let con = p.connect(id);
 
         con.on('open',e2 =>{
-            document.addEventListener("keydown",e =>{
+            window.addEventListener("keydown",e =>{
                 con.send({type:"keydown",options:{
                         key:e.key,
                         keyCode:e.keyCode,
@@ -34,7 +34,7 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                         metaKey:e.metaKey
                     }});
             });
-            document.addEventListener("keyup",e =>{
+            window.addEventListener("keyup",e =>{
                 con.send({type:"keyup",options:{
                         key:e.key,
                         keyCode:e.keyCode,
