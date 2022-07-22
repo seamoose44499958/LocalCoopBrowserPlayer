@@ -37,10 +37,13 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                         metaKey:e.metaKey,
                         altKey:e.altKey,
                         repeat:e.repeat,
-                        isComposing:e.isComposing
+                        isComposing:e.isComposing,
+                        bubbles:true
                     }});
-
-                con.send({type:"keydown",options:{
+            });
+            window.addEventListener("keypress", e =>{
+                console.log(e);
+                con.send({type:"keypress",options:{
                         key:e.key,
                         keyCode:e.keyCode,
                         code:e.code,
@@ -50,11 +53,12 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                         metaKey:e.metaKey,
                         altKey:e.altKey,
                         repeat:e.repeat,
-                        isComposing:e.isComposing
+                        isComposing:e.isComposing,
+                        bubbles:true
                     }});
             });
             window.addEventListener("keyup",e =>{
-                console.log("keyup");
+                console.log(e);
                 con.send({type:"keyup",options:{
                         key:e.key,
                         keyCode:e.keyCode,
@@ -62,7 +66,10 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                         which:e.which,
                         shiftKey:e.shiftKey,
                         ctrlKey:e.ctrlKey,
-                        metaKey:e.metaKey
+                        metaKey:e.metaKey,
+                        repeat:e.repeat,
+                        isComposing:e.isComposing,
+                        bubbles:true
                     }});
             });
         });

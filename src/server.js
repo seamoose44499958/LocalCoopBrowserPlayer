@@ -40,7 +40,7 @@ function createPeer(canvas){
         //Other peer sends over json with type of keyboard event(data.type) and options(data.options)
         conn.on('data',data =>{
             console.log(data);
-            canvas.dispatchEvent(new KeyboardEvent(data.type,data.options));
+            canvas.disatchEvent(new KeyboardEvent(data.type,data.options));
         });
 
         //Prompts user for how many frames to stream the canvas
