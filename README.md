@@ -1,10 +1,10 @@
 # LocalCoopOnlinePlayer
   #### 1. What does it do?
-  >Allows for 2 people to play a Local Coop 
+  >Allows for 2 people to play a Local Coop <br>
   >game inside a browser over the network.
   #### 2. How does it work(basic)?
-  >Player 1 streams the game in the browser to Player 2 over the internet,
-  >while Player 2 sends keypress events over the internet to Player 1 for
+  >Player 1 streams the game in the browser to Player 2 over the internet, <br>
+  >while Player 2 sends keypress events over the internet to Player 1 for <br>
   >execution inside Player 1's browser tab.
   #### 3. How does it work(deeper explanation)?
   >Using a bookmarklet Player 1 will inject a script into a browser tab 
