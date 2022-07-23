@@ -19,4 +19,4 @@
   > 2. Go to website that runs the game you want to play. <br>
   > 3. Wait for the game to load and click on the game to focus it. <br>
   > 4. Click on the bookmark to run the script inside the page. <br>
-  > 5. If prompt tab appears prompting for a number to select canvas, input number of the canvas you want to stream(usually its 0 or named "stage0","game",etc) <br>
+  > 5. If prompt tab appears prompting for a number to select canvas, input number of the canvas you want to stream(usually its 0 or out of the numbered options is called "stage0","gameplayer","game","etc"). This may take some trial and error. <br>
