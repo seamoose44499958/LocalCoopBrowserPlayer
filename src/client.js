@@ -18,15 +18,12 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
     let p = new Peer();
     let id = prompt("Id:");
     p.on("error",e => console.log(e));
-    console.log(id);
-
 
     p.on('open',e =>{
         let con = p.connect(id);
 
         con.on('open',e2 =>{
             window.addEventListener("keydown",e =>{
-                console.log(e);
                 con.send({type:"keydown",options:{
                         key:e.key,
                         keyCode:e.keyCode,
@@ -42,7 +39,6 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                     }});
             });
             window.addEventListener("keypress", e =>{
-                console.log(e);
                 con.send({type:"keypress",options:{
                         key:e.key,
                         keyCode:e.keyCode,
@@ -58,7 +54,6 @@ loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
                     }});
             });
             window.addEventListener("keyup",e =>{
-                console.log(e);
                 con.send({type:"keyup",options:{
                         key:e.key,
                         keyCode:e.keyCode,

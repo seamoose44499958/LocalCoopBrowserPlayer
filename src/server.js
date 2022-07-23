@@ -39,14 +39,14 @@ function createPeer(canvas){
     p.on("connection",conn =>{
         //Other peer sends over json with type of keyboard event(data.type) and options(data.options)
         conn.on('data',data =>{
-            console.log(data);
             canvas.dispatchEvent(new KeyboardEvent(data.type,data.options));
         });
 
         //Prompts user for how many frames to stream the canvas
         let frames = +prompt("Max Frame cap for stream(negative number for no stream)");
         if(!isNaN(frames) && frames > 0) {
-            p.call(conn.peer,canvas.captureStream(frames));
+            let stream = canvas.captureStream(frames);
+            p.call(conn.peer,stream);
         }
     });
 
