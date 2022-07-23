@@ -15,5 +15,4 @@
   > be simulated inside Player 1's browser tab.
   ## How to use?
   #### Player 1 Steps:
-  > 1.Add  to browser
-  > 2.   
+  > 1.Create a bookmark and paste code from [bookmark url](https://github.com/seamoose44499958/LocalCoopOnlinePlayer/blob/master/src/bookmarklet.txt) inside bookmark.
