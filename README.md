@@ -14,5 +14,7 @@
   > dispatchEvent(new KeyboardEvent()) to Player 1 so those key presses can
   > be simulated inside Player 1's browser tab.
   ## How to use?
+  #### Player 1 Steps:
+  1.Open website in browser that 
       
 
