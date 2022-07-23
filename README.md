@@ -27,3 +27,6 @@
   >  10. Done! Have fun playing! 
  #### Player 2 Steps:
   > 1. Go to <https://seamoose44499958.github.io/LocalCoopOnlinePlayer/> 
+  > 2. Input the id sent by other player through a medium(Email,SMS,etc) into the prompt.If the prompt is gone reload the page and repeat step 2.
+  > 3. Wait for stream to load.
+  > 4. Play game and have fun!
