@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Browser Local Multiplayer</title>
-</head>
-<body>
-<video id="stream"></video>
+    <head>
+        <meta charset="UTF-8">
+        <title>Browser Local Multiplayer</title>
+    </head>
+    <body style="background-color:black;">
+        <div style="text-align: center;margin:auto">
+            <video preload="none" autoplay="true" muted="true" id="stream" style="max-height: 100% ;max-width: 100%;pointer-events: none" playsinline></video>
+        </div>
+        <script src="src/client.js"></script>
+    </body>
 
-<script src="src/client.js"></script>
-</body>
 </html>

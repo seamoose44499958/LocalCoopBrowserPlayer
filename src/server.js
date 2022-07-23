@@ -27,7 +27,7 @@ function createPeer(canvas){
     let p = new Peer();
 
     //Destroys connection when window closes
-    window.addEventListener("beforeunload",e =>{
+    window.addEventListener("beforeunload",() =>{
        p.destroy();
     });
 
@@ -40,21 +40,21 @@ function createPeer(canvas){
         //Other peer sends over json with type of keyboard event(data.type) and options(data.options)
         conn.on('data',data =>{
             console.log(data);
-            canvas.disatchEvent(new KeyboardEvent(data.type,data.options));
+            canvas.dispatchEvent(new KeyboardEvent(data.type,data.options));
         });
 
         //Prompts user for how many frames to stream the canvas
         let frames = +prompt("Max Frame cap for stream(negative number for no stream)");
-        if(frames !== NaN && frames > 0) {
+        if(!isNaN(frames) && frames > 0) {
             p.call(conn.peer,canvas.captureStream(frames));
         }
     });
 
-    p.on("disconnected", e=>{
+    p.on("disconnected", () =>{
        p.reconnect();
     });
 
-    p.on("close", e=>{
+    p.on("close", () =>{
         p.destroy();
     });
 
@@ -68,7 +68,7 @@ function createPeer(canvas){
     Else will try to establish connection with other peer and stream canvas.
  */
 function streamCanvas(canvas){
-    loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(result =>{
+    loadScript("https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js").then(() =>{
         alert("Streaming canvas:" + canvas.id)
         createPeer(canvas);
     }, error =>{
@@ -76,7 +76,7 @@ function streamCanvas(canvas){
     });
 }
 
-//If user focused on a iframe or canvas then preform actions
+//If user focused on an iframe or canvas then preform actions
 if(document.activeElement.tagName === "CANVAS"){
     streamCanvas(document.activeElement);
 }
