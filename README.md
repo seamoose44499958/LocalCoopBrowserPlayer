@@ -15,5 +15,8 @@
   > be simulated inside Player 1's browser tab.
   ## How to use?
   #### Player 1 Steps:
-  > 1.Create a bookmark and paste code from [bookmarklet](https://github.com/seamoose44499958/LocalCoopOnlinePlayer/blob/master/src/bookmarklet.txt "Can triple click to highlight all the code") inside bookmark URL. <br>
-  > 2. Go to website that runs the game you want to play.
+  > 1. Create a bookmark and paste code from [bookmarklet](https://github.com/seamoose44499958/LocalCoopOnlinePlayer/blob/master/src/bookmarklet.txt "Can triple click to highlight all the code") inside bookmark URL. <br>
+  > 2. Go to website that runs the game you want to play. <br>
+  > 3. Wait for the game to load and click on the game to focus it. <br>
+  > 4. Click on the bookmark to run the script inside the page. <br>
+  > 5. If prompt tab appears prompting for a number to select canvas, input number of the canvas you want to stream(usually its 0 or named "stage0","game",etc) <br>
