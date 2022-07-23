@@ -25,3 +25,5 @@
   > 8. You should see a alert with an id that you need to send to friend. Send it through a medium(Email,SMS,etc) to the player you want to play the game with. <br>
   >  9. Once the other player connects, an alert should popup requesting the frame cap of the stream. Input a number representing the maximum number of frames the game will stream at.
   >  10. Done! Have fun playing! 
+ #### Player 2 Steps:
+  > 1. Go to <https://seamoose44499958.github.io/LocalCoopOnlinePlayer/> 
