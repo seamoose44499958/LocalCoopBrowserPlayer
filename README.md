@@ -13,6 +13,6 @@
   >Player 2 will use the WEBRTC connection to send information needed for
   > dispatchEvent(new KeyboardEvent()) to Player 1 so those key presses can
   > be simulated inside Player 1's browser tab.
-  ## How to use application?
+  ## How to use?
       
 
