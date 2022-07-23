@@ -15,5 +15,5 @@
   > be simulated inside Player 1's browser tab.
   ## How to use?
   #### Player 1 Steps:
-  > 1.Create a bookmark and paste code from [bookmarklet](https://github.com/seamoose44499958/LocalCoopOnlinePlayer/blob/master/src/bookmarklet.txt "Can triple click to highlight all the code") inside bookmark URL.
+  > 1.Create a bookmark and paste code from [bookmarklet](https://github.com/seamoose44499958/LocalCoopOnlinePlayer/blob/master/src/bookmarklet.txt "Can triple click to highlight all the code") inside bookmark URL. <br>
   > 2. Go to website that runs the game you want to play.
