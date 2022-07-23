@@ -19,5 +19,6 @@
   > 2. Go to website that runs the game you want to play. <br>
   > 3. Wait for the game to load and click on the game to focus it. <br>
   > 4. Click on the bookmark to run the script inside the page. <br>
-  > 5. If prompt tab appears prompting for a number to select canvas, input number of the canvas you want to stream(usually its 0 or out of the numbered options is called "stage0","gameplayer","game","etc"). This may take some trial and error. <br>
+  > 5. If prompt tab appears prompting for a number to select canvas, input number of the canvas you want to stream(usually its 0 or out of the numbered options is called "stage0","gameplayer","game",etc). This may take some trial and error. <br>
   > 6. If it says that you selected an iframe please disable popups on the site. A new tab should open. Go to the new tab and close the old tab. Go back to step 3(You may loop back to step 3 multiple times depending on how much websites are embeded inside each other). <br>
+  > 7.  If prompt tab appears prompting for a number to select iframe, enable popups and input number of iframe you want to open in new tab(usually its 0 or out of the numbered options is called "stage0","gameplayer","game",etc) <br>
