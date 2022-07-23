@@ -8,7 +8,7 @@
   >execution inside Player 1's browser tab.
   #### 3.How does it work(deeper explanation)?
   >Using a bookmarklet Player 1 will inject a script into a browser tab 
-  >with the game he wants to stream. The script will stream the <canvas>
+  >with the game he wants to stream. The script will stream the \<canvas\>
   >to Player 2 using WEBRTC (using wrapper library [PeerJS](https://peerjs.com/)). 
       
 
