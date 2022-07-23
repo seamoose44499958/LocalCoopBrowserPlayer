@@ -10,5 +10,9 @@
   >Using a bookmarklet Player 1 will inject a script into a browser tab 
   >with the game he wants to stream. The script will stream the \<canvas\>
   >to Player 2 using WEBRTC (wrapper library [PeerJS](https://peerjs.com/)). 
+  >Player 2 will use the WEBRTC connection to send information needed for
+  > dispatchEvent(new KeyboardEvent()) to Player 1 so those key presses can
+  > be simulated inside Player 1's browser tab.
+
       
 
